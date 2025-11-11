@@ -237,13 +237,13 @@ function handleKeys(e) {
 
         switch (e.key) {
             case "w": scene.$board.makeMatch(swapPos, { x, y: y - 1 }); break;
-            case "s": scene.$board.makeMatch(swapPos, { x, y: y + 1 }); break;
+            case "x": scene.$board.makeMatch(swapPos, { x, y: y + 1 }); break;
             case "a": scene.$board.makeMatch(swapPos, { x: x - 1, y }); break;
             case "d": scene.$board.makeMatch(swapPos, { x: x + 1, y }); break;
-            case "ArrowUp": scene.$board.swapPos = { x, y: Math.max(y - 1, 0) }; break;
-            case "ArrowDown": scene.$board.swapPos = { x, y: Math.min(y + 1, board.height - 1) }; break;
-            case "ArrowLeft": scene.$board.swapPos = { x: Math.max(x - 1, 0), y }; break;
-            case "ArrowRight": scene.$board.swapPos = { x: Math.min(x + 1, board.width - 1), y }; break;
+            case "e": scene.$board.makeMatch(swapPos, { x: x + 1, y: y - 1,}); break;
+            case "q": scene.$board.makeMatch(swapPos, { x: x - 1, y: y - 1,}); break;
+            case "z": scene.$board.makeMatch(swapPos, { x: x - 1, y: y + 1,}); break;
+            case "c": scene.$board.makeMatch(swapPos, { x: x + 1, y: y + 1,}); break;
         }
     }
 }
